@@ -34,9 +34,9 @@ function Index() {
         <>
           <div aria-hidden className="pointer-events-none fixed inset-0 bg-repeat" style={{ backgroundImage: `url(${parchment})`, backgroundSize: "520px" }} />
           <Petals />
-          <img src={pillar} alt="" aria-hidden width={640} height={1920} className="pointer-events-none fixed left-0 top-0 z-20 h-screen w-[15vw] max-w-[170px] object-cover lg:left-[max(0px,calc(50%-560px))]" />
-          <img src={pillar} alt="" aria-hidden width={640} height={1920} className="pointer-events-none fixed right-0 top-0 z-20 h-screen w-[15vw] max-w-[170px] -scale-x-100 object-cover lg:right-[max(0px,calc(50%-560px))]" />
-          <div className="relative z-10 mx-auto max-w-3xl px-[15vw] lg:px-6">
+          <img src={pillar} alt="" aria-hidden width={600} height={1920} className="pointer-events-none fixed left-0 top-0 z-20 h-screen w-[10vw] max-w-[120px] object-cover lg:left-[max(0px,calc(50%-560px))]" />
+          <img src={pillar} alt="" aria-hidden width={600} height={1920} className="pointer-events-none fixed right-0 top-0 z-20 h-screen w-[10vw] max-w-[120px] -scale-x-100 object-cover lg:right-[max(0px,calc(50%-560px))]" />
+          <div className="relative z-10 mx-auto max-w-3xl px-[12vw] lg:px-6">
           <Hero />
           <Couple />
           <Events />

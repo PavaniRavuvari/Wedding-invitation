@@ -1,20 +1,19 @@
-import gauriArt from "@/assets/ritual-gauri.png";
-import jeelakarraArt from "@/assets/ritual-jeelakarra.png";
-import mangalyaArt from "@/assets/ritual-mangalyadharana.png";
-import talambraluArt from "@/assets/ritual-talambralu.png";
-import saptapadiArt from "@/assets/ritual-saptapadi.png";
-import appagintaluArt from "@/assets/ritual-appagintalu.png";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { CalendarPlus, Clock, MapPin, Navigation, X } from "lucide-react";
 import ganesha from "@/assets/ganesha.png";
 import arch from "@/assets/temple-arch.png";
 import mandap from "@/assets/mandap-couple.jpg";
+import gauriArt from "@/assets/ritual-gauri.png";
+import jeelakarraArt from "@/assets/ritual-jeelakarra.png";
+import mangalyaArt from "@/assets/ritual-mangalyadharana.png";
+import talambraluArt from "@/assets/ritual-talambralu.png";
+import appagintaluArt from "@/assets/ritual-appagintalu.png";
 import { googleCalendarUrl, wedding, type WeddingEvent } from "@/config/wedding";
 import { BiHeading, BiText, Corners, Divider, Reveal, Section } from "./primitives";
 import { Sparkles } from "./Effects";
 import { cn } from "@/lib/utils";
-
 
 const w = wedding;
 
@@ -150,7 +149,7 @@ export function Couple() {
 
   return (
     <Section>
-      <BiHeading t={{ te: "వదువరులు", en: "The Couple" }} />
+      <BiHeading t={{ te: "వధూవరులు", en: "The Couple" }} />
 
       <div className="grid gap-12 md:grid-cols-2">
         {people.map((p, i) => (
@@ -668,148 +667,119 @@ export function Family() {
 const weddingRituals = [
   {
     id: "gauri",
-    title: { te: "గౌరీ పూజ", en: "Gauri Puja" },
     image: gauriArt,
+    title: { te: "గౌరీ పూజ", en: "Gauri Puja" },
     te: [
-      "వధువు గౌరీ దేవిని భక్తితో పూజించి ఆశీస్సులు కోరుకుంటుంది.",
-      "సుఖసంతోషాలతో కూడిన వైవాహిక జీవితం కోసం ప్రార్థిస్తుంది.",
-      "ఈ పూజ కొత్త జీవితానికి శుభారంభంగా భావించబడుతుంది.",
+      "వధువు గౌరీ దేవిని భక్తితో పూజించి, ఆశీస్సులు కోరుకుంటుంది.",
+      "సంతోషకరమైన వైవాహిక జీవితం కోసం అమ్మవారి అనుగ్రహాన్ని ప్రార్థిస్తుంది.",
+      "ఈ పూజ దాంపత్య జీవితానికి శుభం, శాంతి కలగాలని సూచిస్తుంది.",
     ],
     en: [
-      "The bride worships Goddess Gauri with devotion and seeks her blessings.",
-      "She prays for a happy and harmonious married life.",
-      "This ritual symbolizes an auspicious beginning to her new journey.",
+      "The bride worships Goddess Gauri and seeks her blessings.",
+      "She prays for happiness, harmony and prosperity in married life.",
+      "The ritual marks an auspicious beginning to the couple's journey.",
     ],
   },
   {
     id: "jeelakarra",
-    title: { te: "జీలకర్ర బెల్లం", en: "Jeelakarra Bellam" },
     image: jeelakarraArt,
+    title: { te: "జీలకర్ర బెల్లం", en: "Jeelakarra Bellam" },
     te: [
-      "వధూవరులు జీలకర్ర బెల్లాన్ని ఒకరి తలపై మరొకరు ఉంచుకుంటారు.",
-      "ఇది వారి జీవితాల్లోని తీపి, కష్టాలను కలిసి పంచుకోవడాన్ని సూచిస్తుంది.",
-      "ఈ ఆచారం వారి అనుబంధాన్ని, ఐక్యతను తెలియజేస్తుంది.",
+      "వధూవరులు జీలకర్ర, బెల్లం మిశ్రమాన్ని ఒకరి తలపై మరొకరు ఉంచుకుంటారు.",
+      "జీలకర్ర, బెల్లం కలిసినట్లే తమ జీవితాలు కలిసిపోవాలని ఈ ఆచారం చెబుతుంది.",
+      "ఇది వారి అనుబంధం, ఐక్యత మరియు జీవితాంతం కలిసుండే బంధానికి ప్రతీక.",
     ],
     en: [
-      "The bride and groom place cumin and jaggery on each other's heads.",
-      "It symbolizes sharing life's sweetness and challenges together.",
-      "This ritual represents their unity and lifelong bond.",
+      "The bride and groom place a mixture of cumin and jaggery on each other's heads.",
+      "Like the two ingredients blend together, the couple promises to share life's joys and challenges.",
+      "This ritual symbolises unity, togetherness and a lifelong bond.",
     ],
   },
   {
     id: "mangalyadharana",
-    title: { te: "మాంగల్యధారణ", en: "Mangala Sutra Dharana" },
     image: mangalyaArt,
+    title: { te: "మాంగల్యధారణ", en: "Mangala Sutra Dharana" },
     te: [
-      "వరుడు వధువు మెడలో మంగళసూత్రాన్ని కడతాడు.",
-      "ఇది వివాహ బంధానికి పవిత్రమైన గుర్తుగా నిలుస్తుంది.",
-      "వారి జీవితాంతపు అనుబంధానికి ఇది ప్రతీకగా భావించబడుతుంది.",
+      "శుభ ముహూర్తంలో వరుడు వధువు మెడలో మాంగల్యాన్ని కడతాడు.",
+      "మూడు ముళ్లు వారి జీవితాల అనుబంధాన్ని, పరస్పర నిబద్ధతను సూచిస్తాయి.",
+      "ఇది వివాహ బంధంలో అత్యంత పవిత్రమైన ఘట్టంగా భావించబడుతుంది.",
     ],
     en: [
-      "The groom ties the sacred mangalsutra around the bride's neck.",
-      "It marks the sacred bond of their marriage.",
-      "It symbolizes their lifelong commitment to each other.",
+      "At the auspicious moment, the groom ties the mangalsutra around the bride's neck.",
+      "The three knots represent their commitment and the bond joining their lives.",
+      "It is one of the most sacred and cherished moments of the wedding.",
     ],
   },
   {
     id: "talambralu",
-    title: { te: "తలంబ్రాలు", en: "Talambralu" },
     image: talambraluArt,
+    title: { te: "తలంబ్రాలు", en: "Talambralu" },
     te: [
-      "వధూవరులు ఒకరిపై మరొకరు పసుపు కలిపిన అక్షింతలు పోసుకుంటారు.",
-      "ఇది ఆనందం, శ్రేయస్సు మరియు ఆశీర్వాదాలకు ప్రతీక.",
-      "ఈ వేడుక వారి వివాహంలో సంతోషాన్ని నింపుతుంది.",
+      "వధూవరులు ఒకరి తలపై మరొకరు పసుపు కలిపిన అక్షతలను చల్లుకుంటారు.",
+      "ఈ ఆచారం వారి జీవితాల్లో ఆనందం, సిరిసంపదలు నిండాలని సూచిస్తుంది.",
+      "నవ్వులు, ఆటపాటల మధ్య జరిగే ఈ వేడుక వివాహానికి ప్రత్యేక శోభనిస్తుంది.",
     ],
     en: [
-      "The couple shower each other with rice mixed with turmeric.",
-      "It symbolizes happiness, prosperity and blessings.",
-      "This joyful ritual adds warmth to their wedding celebration.",
-    ],
-  },
-  {
-    id: "saptapadi",
-    title: { te: "సప్తపది", en: "Saptapadi" },
-    image: saptapadiArt,
-    te: [
-      "వధూవరులు పవిత్ర అగ్ని చుట్టూ ఏడు అడుగులు వేస్తారు.",
-      "ప్రతి అడుగు వారి జీవితంలోని ఒక ముఖ్యమైన వాగ్దానాన్ని సూచిస్తుంది.",
-      "ఇది జీవితాంతం కలిసి నడిచే బంధానికి ప్రతీక.",
-    ],
-    en: [
-      "The couple take seven sacred steps around the holy fire.",
-      "Each step represents an important promise for their married life.",
-      "It symbolizes their journey together through life.",
+      "The couple showers each other with turmeric-tinted sacred rice.",
+      "The rice symbolises blessings, abundance and prosperity in their life together.",
+      "Filled with joy and playful moments, this is a beloved Telugu wedding tradition.",
     ],
   },
   {
     id: "appagintalu",
-    title: { te: "అప్పగింతలు", en: "Appagintalu" },
     image: appagintaluArt,
+    title: { te: "అప్పగింతలు", en: "Appagintalu" },
     te: [
-      "తల్లిదండ్రులు తమ కుమార్తెను ప్రేమతో కొత్త కుటుంబానికి అప్పగిస్తారు.",
-      "ఇది ఆనందం, ఆశీర్వాదాలు మరియు భావోద్వేగాలతో కూడిన ఘట్టం.",
-      "వధువు జీవితంలో కొత్త అధ్యాయానికి ఇది నాంది పలుకుతుంది.",
+      "వధువు తల్లిదండ్రులు తమ కుమార్తెను ప్రేమతో వరుడి కుటుంబానికి అప్పగిస్తారు.",
+      "ఆమె కొత్త జీవిత ప్రయాణానికి కుటుంబ సభ్యులు ఆశీస్సులు అందిస్తారు.",
+      "ఈ ఘట్టం ప్రేమ, నమ్మకం మరియు కుటుంబాల అనుబంధాన్ని ప్రతిబింబిస్తుంది.",
     ],
     en: [
-      "The bride's parents lovingly entrust her to her new family.",
-      "It is an emotional moment filled with love and blessings.",
-      "It marks the beginning of a new chapter in her life.",
+      "The bride's parents lovingly entrust their daughter to the groom and his family.",
+      "Family members offer blessings as she begins a new chapter of life.",
+      "This emotional moment reflects love, trust and the joining of two families.",
     ],
   },
-] as const;
-
+];
 
 export function Gallery() {
-  const [selected, setSelected] =
-    useState<(typeof weddingRituals)[number] | null>(null);
+  const [selected, setSelected] = useState<(typeof weddingRituals)[number] | null>(null);
 
   return (
     <Section>
-      <BiHeading
-        t={{ te: "మన వివాహ సంప్రదాయాలు", en: "Our Wedding Rituals" }}
-      />
+      <BiHeading t={{ te: "మన వివాహ సంప్రదాయాలు", en: "Our Wedding Rituals" }} />
 
-      <p className="mx-auto mb-8 max-w-xl text-center font-serif text-sm text-muted-foreground">
-        Discover the beautiful traditions and sacred rituals
-        that make a Telugu wedding truly special.
+      <p className="mx-auto mb-7 max-w-xl px-3 text-center font-serif text-sm text-muted-foreground">
+        Discover the beautiful traditions and sacred rituals that make a Telugu wedding truly special.
       </p>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
         {weddingRituals.map((ritual, i) => (
-          <Reveal key={ritual.id} delay={i * 0.08}>
+          <Reveal key={ritual.id} delay={i * 0.06}>
             <motion.button
               type="button"
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.97 }}
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => setSelected(ritual)}
-              className="group w-full overflow-hidden rounded-2xl border-2 border-gold bg-leaf p-2 text-center shadow-royal transition-shadow hover:shadow-lg"
+              className="group w-full overflow-hidden rounded-xl border border-[#bd9857] bg-[#fff8eb] p-1.5 text-center shadow-md transition-shadow hover:shadow-lg sm:rounded-2xl sm:p-2"
             >
-              <div className="overflow-hidden rounded-xl border border-gold/60">
+              <div className="overflow-hidden rounded-lg border border-[#d7bd88]">
                 <img
                   src={ritual.image}
                   alt={ritual.title.en}
                   loading="lazy"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="aspect-[5/4] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-
-              <div className="px-2 py-4">
-                <p className="font-telugu text-xl font-semibold text-maroon">
+              <div className="px-1 pb-2 pt-3 sm:px-2 sm:pb-3">
+                <p className="font-telugu text-sm font-semibold leading-6 text-maroon sm:text-base">
                   {ritual.title.te}
                 </p>
-
-                <p className="mt-1 font-display text-sm font-semibold text-gold-deep">
+                <p className="mt-0.5 font-display text-[10px] font-semibold uppercase tracking-wide text-gold-deep sm:text-xs">
                   {ritual.title.en}
                 </p>
-
-                <div className="mx-auto mt-3 flex items-center justify-center gap-2">
-                  <span className="h-px w-8 bg-gold" />
-                  <span className="text-gold">✿</span>
-                  <span className="h-px w-8 bg-gold" />
-                </div>
-
-                <p className="mt-2 font-serif text-xs text-muted-foreground">
-                  Tap to explore this ritual
+                <p className="mt-2 font-serif text-[10px] text-muted-foreground sm:text-xs">
+                  Tap to explore
                 </p>
               </div>
             </motion.button>
@@ -820,7 +790,7 @@ export function Gallery() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            className="fixed inset-0 z-[70] flex items-center justify-center overflow-y-auto bg-maroon/80 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto bg-[#2b1118]/85 p-2 backdrop-blur-sm sm:p-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -830,73 +800,61 @@ export function Gallery() {
               role="dialog"
               aria-modal="true"
               aria-labelledby="ritual-title"
-              className="relative my-auto w-full max-w-3xl overflow-hidden rounded-2xl border-2 border-gold bg-leaf p-4 shadow-2xl md:p-7"
-              initial={{ opacity: 0, scale: 0.9, y: 25 }}
+              className="relative my-auto max-h-[94dvh] w-full max-w-4xl overflow-y-auto overscroll-contain rounded-2xl border-[3px] border-double border-[#b58b48] bg-[#fff8ed] p-3 shadow-[0_20px_70px_rgba(0,0,0,0.45)] sm:p-5 md:p-7"
+              initial={{ opacity: 0, scale: 0.96, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 25 }}
-              transition={{ duration: 0.3 }}
+              exit={{ opacity: 0, scale: 0.96, y: 16 }}
+              transition={{ duration: 0.22 }}
               onClick={(event) => event.stopPropagation()}
             >
+              <div className="pointer-events-none absolute inset-1.5 rounded-xl border border-[#d8c092] sm:inset-2" />
               <button
                 type="button"
                 aria-label="Close ritual details"
                 onClick={() => setSelected(null)}
-                className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-gold bg-maroon text-gold shadow-md transition-transform hover:scale-110"
+                className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-[#b58b48] bg-[#6f3445] text-[#fff4d9] shadow-md hover:bg-[#542432]"
               >
-                <X size={20} />
+                <X size={19} />
               </button>
 
-              <div className="grid items-center gap-5 md:grid-cols-2">
-                <div className="overflow-hidden rounded-xl border-2 border-gold shadow-royal">
+              <div className="relative z-10 mx-auto grid min-w-0 max-w-3xl grid-cols-1 items-start gap-4 pt-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:gap-6 md:pt-2">
+                <div className="mx-auto w-full max-w-md overflow-hidden rounded-xl border-2 border-[#c5a15e] bg-white p-1 shadow-lg">
                   <img
                     src={selected.image}
                     alt={selected.title.en}
-                    className="max-h-[420px] w-full object-cover"
+                    className="max-h-[34vh] min-h-[170px] w-full rounded-lg object-cover md:max-h-[430px]"
                   />
                 </div>
 
-                <div className="px-1 py-3 text-center md:px-3">
-                  <p className="mb-2 text-2xl text-gold">❀</p>
-
-                  <h3
-                    id="ritual-title"
-                    className="font-telugu text-3xl font-bold text-maroon"
-                  >
+                <div className="min-w-0 px-2 pb-3 text-center sm:px-4 md:px-2">
+                  <p className="mb-1 text-2xl text-[#b58b48]">❀</p>
+                  <h3 id="ritual-title" className="break-words font-telugu text-2xl font-bold leading-relaxed text-[#713447] sm:text-3xl">
                     {selected.title.te}
                   </h3>
-
-                  <p className="mt-1 font-display text-lg font-semibold text-gold-deep">
+                  <p className="mt-1 break-words font-display text-base font-semibold text-[#9b7132] sm:text-lg">
                     {selected.title.en}
                   </p>
 
-                  <div className="my-4 flex items-center justify-center gap-2">
-                    <span className="h-px flex-1 bg-gold" />
-                    <span className="text-gold">✿</span>
-                    <span className="h-px flex-1 bg-gold" />
+                  <div className="my-3 flex items-center justify-center gap-2">
+                    <span className="h-px flex-1 bg-[#c5a15e]" />
+                    <span className="text-[#b58b48]">✿</span>
+                    <span className="h-px flex-1 bg-[#c5a15e]" />
                   </div>
 
-                  <div className="space-y-3 text-left">
+                  <div className="space-y-2.5 text-left">
                     {selected.te.map((line, i) => (
-                      <p
-                        key={`te-${i}`}
-                        className="font-telugu text-base leading-8 text-maroon"
-                      >
-                        <span className="mr-2 text-vermilion">❀</span>
-                        {line}
+                      <p key={`te-${i}`} className="break-words font-telugu text-sm leading-7 text-[#713447] sm:text-base sm:leading-8">
+                        <span className="mr-1.5 text-[#a84e55]">❀</span>{line}
                       </p>
                     ))}
                   </div>
 
-                  <div className="my-4 border-t border-gold/60" />
+                  <div className="my-3 border-t border-[#d8c092]" />
 
-                  <div className="space-y-3 text-left">
+                  <div className="space-y-2 text-left">
                     {selected.en.map((line, i) => (
-                      <p
-                        key={`en-${i}`}
-                        className="font-serif text-sm leading-6 text-foreground"
-                      >
-                        <span className="mr-2 text-vermilion">❀</span>
-                        {line}
+                      <p key={`en-${i}`} className="break-words font-serif text-xs leading-6 text-[#654b4b] sm:text-sm sm:leading-7">
+                        <span className="mr-1.5 text-[#a84e55]">❀</span>{line}
                       </p>
                     ))}
                   </div>
@@ -909,7 +867,6 @@ export function Gallery() {
     </Section>
   );
 }
-
 
 function diff(target: number) {
   const d = Math.max(0, target - Date.now());

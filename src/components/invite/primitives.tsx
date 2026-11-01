@@ -25,9 +25,9 @@ export function BiHeading({ t, light }: { t: Bilingual; light?: boolean }) {
 export function Divider() {
   return (
     <div className="mx-auto mt-4 flex items-center justify-center gap-3 text-gold">
-      <span className="h-px w-16 bg-gold" />
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 4 6 8 7-4 1-7 3-8 7-1-4-4-6-8-7 4-1 7-3 8-7z" /><circle cx="12" cy="20" r="2" /></svg>
-      <span className="h-px w-16 bg-gold" />
+      <span className="h-px w-10 bg-gold" />
+      <svg width="16" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 4 6 8 7-4 1-7 3-8 7-1-4-4-6-8-7 4-1 7-3 8-7z" /><circle cx="12" cy="20" r="2" /></svg>
+      <span className="h-px w-10 bg-gold" />
     </div>
   );
 }

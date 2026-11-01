@@ -146,7 +146,7 @@ export const wedding = {
       theme: "wedding",
       title: { te: "వివాహ మహోత్సవం", en: "Wedding Ceremony" },
       message: {
-        te: "శుభ ముహూర్తాన జరిగే మా అమ్మాయి కళ్యాణానికి విచ్చేసి వదువరులను ఆశీర్వదించండి.",
+        te: "శుభ ముహూర్తాన జరిగే మా అమ్మాయి కళ్యాణానికి విచ్చేసి వధూవరులను ఆశీర్వదించండి.",
         en: "Grace the sacred union at the auspicious muhurtham and bless the couple.",
       },
       dateLabel: {
@@ -160,7 +160,7 @@ export const wedding = {
       start: "2026-11-22T20:45:00+05:30",
       end: "2026-11-22T23:45:00+05:30",
       venueName: "Sri Srinivasa Kalyana Mandapam",
-      address: "Sri Srinivasa Kalyana Mandapam, Darsi",
+      address: "Darsi",
       mapsUrl:
         "https://maps.app.goo.gl/UG6kcYU37XQS29zk6?g_st=aw",
       image: couple,
